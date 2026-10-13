@@ -1,0 +1,30 @@
+{
+  "projects": {
+    "party-buttons": {
+      "relPath": "party-buttons",
+      "name": "party-buttons",
+      "buildConfigs": {
+        "build/xiao_esp32c6/esp32c6/hpcore": {
+          "relBoardSubDir": "seeed/xiao_esp32c6",
+          "board": "xiao_esp32c6/esp32c6/hpcore",
+          "name": "build/xiao_esp32c6/esp32c6/hpcore",
+          "compilerOptimization": "debug",
+          "westBuildArgs": [],
+          "westBuildCMakeArgs": [
+            "-DCONFIG_DEBUG_OPTIMIZATIONS=y",
+            "-DCONFIG_DEBUG_THREAD_INFO=y"
+          ],
+          "confFiles": {
+            "config": [],
+            "overlay": []
+          }
+        }
+      },
+      "twisterConfigs": {},
+      "confFiles": {
+        "config": [],
+        "overlay": []
+      }
+    }
+  }
+}

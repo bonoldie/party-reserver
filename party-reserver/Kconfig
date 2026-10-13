@@ -1,0 +1,29 @@
+mainmenu "Party reserver"
+
+source "Kconfig.zephyr"
+
+menu "Application options"
+
+choice DEVICE_ROLE
+    prompt "Device role"
+    default BUTTON_SENDER
+    help
+        Select whether this device is a physical reservation
+        button or a reservations gateway.
+
+config BUTTON_SENDER
+    bool "Reservation button"
+
+config RECEIVER
+    bool "Reservation receiver"
+
+endchoice
+
+config APP_ESPNOW_CHANNEL
+    int "ESP-NOW Wi-Fi channel"
+    range 1 13
+    default 1
+    help
+        Both senders and receiver devices must use the same channel.
+
+endmenu
