@@ -19,11 +19,17 @@ config RECEIVER
 
 endchoice
 
+config ESPNOW_BEACON_INTERVAL_S
+    int "ESP-NOW beacon interval"
+    default 5
+    help
+        Heartbeat beacon interval (in seconds).
+
 config APP_ESPNOW_CHANNEL
     int "ESP-NOW Wi-Fi channel"
     range 1 13
     default 1
     help
         Both senders and receiver devices must use the same channel.
-
+        
 endmenu

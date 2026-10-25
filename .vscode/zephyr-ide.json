@@ -1,8 +1,8 @@
 {
   "projects": {
-    "party-buttons": {
-      "relPath": "party-buttons",
-      "name": "party-buttons",
+    "party-reserver": {
+      "relPath": "party-reserver",
+      "name": "party-reserver",
       "buildConfigs": {
         "build/xiao_esp32c6/esp32c6/hpcore": {
           "relBoardSubDir": "seeed/xiao_esp32c6",
@@ -12,11 +12,22 @@
           "westBuildArgs": [],
           "westBuildCMakeArgs": [
             "-DCONFIG_DEBUG_OPTIMIZATIONS=y",
-            "-DCONFIG_DEBUG_THREAD_INFO=y"
+            "-DCONFIG_DEBUG_THREAD_INFO=y",
+            "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
           ],
           "confFiles": {
-            "config": [],
-            "overlay": []
+            "config": [
+              {
+                "path": "party-reserver/prj.conf",
+                "extra": false
+              }
+            ],
+            "overlay": [
+              {
+                "path": "party-reserver/boards/app.overlay",
+                "extra": false
+              }
+            ]
           }
         }
       },

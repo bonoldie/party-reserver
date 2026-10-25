@@ -4,4 +4,10 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
 project(party-reserver C)
 
-target_sources(app PRIVATE src/main.c)
+file(GLOB SRC
+    "src/*.c"
+)
+
+target_sources(app PRIVATE ${SRC})
+
+zephyr_include_directories(include)
